@@ -1,0 +1,31 @@
+# Simulate Callback Request
+
+POST localhost:8000/payments/callback
+Content-Type: application/json
+
+{
+  "MerchantRequestID": "123456",
+  "CheckoutRequestID": "789012",
+  "ResultCode": 0,
+  "ResultDesc": "Success",
+  "CallbackMetadata": {
+    "Item": [
+      {
+        "Name": "Amount",
+        "Value": 100.00
+      },
+      {
+        "Name": "MpesaReceiptNumber",
+        "Value": "ABC123"
+      },
+      {
+        "Name": "TransactionDate",
+        "Value": "2024-02-20 15:30:00"
+      },
+      {
+        "Name": "PhoneNumber",
+        "Value": "254700000000"
+      }
+    ]
+  }
+}
